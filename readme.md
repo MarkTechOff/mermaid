@@ -8,25 +8,16 @@
 
 ## Discovery Logic
 
-```mermaid
-flowchart TD
-  A [ Deploy to production] --> B { Is it Friday? };
-  B -- Yes --> C [Do not deploy];
-  B -- No --> D [Run deploy];
-  C ----> E [Enjoy your weekend];
-  C ----> E [Enjoy your weekend];
-```
 
 ## Sequence diagram
 ```mermaid
 sequenceDiagram
-    participant dotcom
-    participant iframe
-    participant viewscreen
-    dotcom->>iframe: loads html w/ iframe url
-    iframe->>viewscreen: request template
-    viewscreen->>iframe: html & javascript
-    iframe->>dotcom: iframe ready
-    dotcom->>iframe: set mermaid data on iframe
-    iframe->>iframe: render mermaid
+    participate User
+    participant Application
+    participant Discovery
+    participant IDP
+    User->>Application : access application 
+    Application->>User : 302 redirect 
+    User->>Discovery : request user name page w cooking
+    Discovery->>User: 302 rediect to application (w encoded data - or back-channel)
 ```
