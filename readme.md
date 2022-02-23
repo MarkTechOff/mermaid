@@ -7,9 +7,12 @@
 ```
 
 ## Discovery Logic
+```mermaid
+flowchart TD
+A [start]
+```
 
-
-## Sequence diagram
+## Discovery Sequence 
 ```mermaid
 sequenceDiagram
     participant User
@@ -22,7 +25,7 @@ sequenceDiagram
     Discovery->>User: 302 redirect (w encoded data )
     Discovery-->Application: back-channel?
     User->>Application : automatic
-    Application-->Discovery: get IDP info 
-    Discovery-->Application: return IDP info
-    Application-->IDP : authentication protocol
+    Application->>Discovery: get IDP info 
+    Discovery->>Application: return IDP info
+    Application->>IDP : authentication protocol
 ```
