@@ -9,7 +9,7 @@
 ## Discovery Logic
 ```mermaid
 flowchart TD
-A [start]
+    A [start]
 ```
 
 ## Discovery Sequence 
