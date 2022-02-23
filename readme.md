@@ -19,5 +19,6 @@ sequenceDiagram
     User->>Application : access application 
     Application->>User : 302 redirect 
     User->>Discovery : request user name page w cooking
-    Discovery->>User: 302 rediect to application (w encoded data - or back-channel)
+    Discovery->>User: 302 redirect (w encoded data )
+    Discovery-->Application: back-channel?
 ```
