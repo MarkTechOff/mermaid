@@ -12,7 +12,7 @@
 flowchart TD
   A [ Deploy to production] --> B { Is it Friday? };
   B -- Yes --> C [Do not deploy];
-  b -- No --> D [Run deploy];
+  B -- No --> D [Run deploy];
   C --> E [Enjoy your weekend];
   C --> E;
 ```
