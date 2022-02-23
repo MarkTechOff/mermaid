@@ -21,4 +21,8 @@ sequenceDiagram
     User->>Discovery : request user name page w cooking
     Discovery->>User: 302 redirect (w encoded data )
     Discovery-->Application: back-channel?
+    User->>Application : automatic
+    Application-->Discovery: get IDP info 
+    Discovery-->Application: return IDP info
+    Application-->IDP : authentication protocol
 ```
