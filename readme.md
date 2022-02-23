@@ -12,7 +12,7 @@
 ## Sequence diagram
 ```mermaid
 sequenceDiagram
-    participate User
+    participant User
     participant Application
     participant Discovery
     participant IDP
